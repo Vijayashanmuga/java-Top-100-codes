@@ -1,0 +1,71 @@
+//using if else
+
+package codes;
+
+import java.util.*;
+
+public class greater2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter 1st number");
+        int a = sc.nextInt();
+        System.out.println("Enter second number");
+        int b = sc.nextInt();
+        String result = greater(a, b); // Storing the result in a String
+        System.out.println("Greatest of two numbers: " + result);
+    }
+
+    public static String greater(int a, int b) { // Change return type to String
+        if (a > b) {
+            return "A is greater"; // Return as String
+        } else if (b > a) { // Add an else if condition to handle equality
+            return "B is greater"; // Return as String
+        } else {
+            return "Both numbers are equal"; // Return as String if a equals b
+        }
+    }
+}
+
+//using ternary operator
+
+package codes;
+
+import java.util.*;
+
+public class greater2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter 1st number");
+        int a = sc.nextInt();
+        System.out.println("Enter second number");
+        int b = sc.nextInt();
+        String result = greater(a, b); // Storing the result in a String
+        System.out.println("Greatest of two numbers: " + result);
+    }
+
+    public static String greater(int a, int b) { // Change return type to String
+        String result = (a > b) ? "A" : "B";
+        return result;
+    }
+}
+
+// inbuilt Maxfunction
+
+import java.util.*;
+
+public class greater2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter 1st number");
+        int a = sc.nextInt();
+        System.out.println("Enter second number");
+        int b = sc.nextInt();
+        int result = greater(a, b); 
+        System.out.println("Greatest of two numbers: " + result);
+    }
+
+    public static int greater(int a, int b) { 
+        int result = Math.max(a, b);
+        return result;
+    }
+}
