@@ -1,0 +1,56 @@
+//sum of numbers in given range
+
+package codes;
+
+public class sumngvnrange {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 10;
+        int result = sum(a, b); // Store the result returned by the sum method
+        System.out.println("The sum is: " + result); // Print the result
+    }
+
+    public static int sum(int a, int b) { // Change return type to int
+        int sum = 0;
+        for (int i = a; i <= b; i++) {
+            sum += i;
+        }
+        return sum; // Return the sum
+    }
+}
+
+//using reasursion
+
+package codes;
+
+public class sumngvnrange {
+
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 10;
+        int sum = 0;
+        int result = getsum(sum, a, b);
+        System.out.println(result);
+    }
+
+    public static int getsum(int sum, int a, int b) {
+        if (a > b) {
+            return sum;
+        }
+        return a + getsum(sum, a + 1, b);
+    }
+}
+
+//using formula
+
+package codes;
+
+public class sumngvnrange {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 10;
+        int sum = b * (b + 1) / 2 - a * (a + 1) / 2 + a;
+        System.out.println(sum);
+    }
+
+}
