@@ -1,0 +1,44 @@
+package codes;
+
+import java.util.*;
+
+//using for loop
+
+public class sumNnatural {
+    public static void main(String[] args) {
+
+        int n = 10;
+        int sum = 0;
+
+        for (int i = 1; i <= n; i++)
+            sum += i;
+        System.out.println(sum);
+    }
+}
+
+using formula
+
+public class sumNnatural {
+
+    public static void main(String[] args) {
+        int n = 10;
+        int sum = (n * (n + 1) / 2);
+        System.out.println(sum);
+    }
+}
+
+//using recursion
+
+public class sumNnatural {
+
+    public static void main(String[] args) {
+        int n = 10;
+        int sum = getsum(n);
+        System.out.println();
+    }
+
+    static int getsum(int N) {
+        return N;
+
+    }
+}
