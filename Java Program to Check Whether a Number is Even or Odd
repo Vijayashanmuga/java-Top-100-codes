@@ -1,0 +1,42 @@
+package codes;
+
+import java.util.*;
+
+using if condition
+public class evenodd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number:");
+        int a = sc.nextInt();
+        evenodd(a);
+    }
+
+    static void evenodd(int n) {
+        if (n % 2 == 0) {
+            System.out.println("The given number is even");
+        } else {
+            System.out.println("The given number is odd");
+        }
+    }
+}
+
+// bitwise
+
+public class evenodd {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int a = sc.nextInt();
+        if (isEven(a)) {
+            System.out.println("Even");
+        } else {
+            System.out.println("Odd");
+        }
+    }
+
+    static boolean isEven(int n) {
+        return ((n & 1) == 0);
+
+    }
+}
