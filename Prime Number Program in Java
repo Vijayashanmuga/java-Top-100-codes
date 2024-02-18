@@ -1,0 +1,148 @@
+package codes;
+
+import java.util.*;;
+
+//simple iterative solution
+
+public class primeornot {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int num = sc.nextInt();
+        isprime(num);
+    }
+
+    static void isprime(int n) {
+        int count = 0;
+        if (n < 2) {
+            System.out.println("Not prime");
+        }
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0) {
+                count += 1;
+            }
+        }
+        if (count > 2) {
+            System.out.println("Not prime");
+        } else {
+            System.out.println("Prime");
+        }
+    }
+
+}
+
+//optimized by break condition
+
+public class primeornot {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int num = sc.nextInt();
+        isprime(num);
+    }
+
+    static void isprime(int n) {
+        boolean isprime = true;
+        if (n < 2) {
+            isprime = false;
+        }
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0) {
+                isprime = false;
+                break;
+            }
+
+        }
+        String result = isprime ? "prime" : "Not prime";
+        System.out.println(result);
+    }
+
+}
+
+//optimized by n/2
+public class primeornot {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int num = sc.nextInt();
+        isprime(num);
+    }
+
+    static void isprime(int n) {
+        boolean isprime = true;
+        if (n < 2) {
+            isprime = false;
+        }
+        for (int i = 2; i < n / 2; i++) {
+            if (n % i == 0) {
+                isprime = false;
+                break;
+            }
+
+        }
+        String result = isprime ? "prime" : "Not prime";
+        System.out.println(result);
+    }
+
+}
+
+//optimized by root n
+
+public class primeornot {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int num = sc.nextInt();
+        isprime(num);
+    }
+
+    static void isprime(int n) {
+        boolean isprime = true;
+        if (n < 2) {
+            isprime = false;
+        }
+        for (int i = 2; i < Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                isprime = false;
+                break;
+            }
+
+        }
+        String result = isprime ? "prime" : "Not prime";
+        System.out.println(result);
+    }
+
+}
+
+//optimized by skipping even nos
+
+public class primeornot {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int num = sc.nextInt();
+        isprime(num);
+    }
+
+    static void isprime(int n) {
+        boolean isprime = true;
+        if (n <= 1) {
+            isprime = false;
+        } else if (n == 2) {
+            isprime = true;
+        } else if (n % 2 == 0) {
+            isprime = false;
+        }
+        for (int i = 3; i < Math.sqrt(n); i += 2) {
+            if (n % i == 0) {
+                isprime = false;
+                break;
+            }
+
+        }
+        String result = isprime ? "prime" : "Not prime";
+        System.out.println(result);
+    }
+
+}
+
