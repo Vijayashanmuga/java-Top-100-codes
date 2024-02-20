@@ -1,0 +1,95 @@
+package codes;
+
+//using iteration
+
+import java.util.*;
+
+public class palindrome {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int temp = a;
+        int rev = 0;
+        int rem;
+        while (temp != 0) {
+            rem = temp % 10;
+            rev = rev * 10 + rem;
+            temp = temp / 10;
+        }
+
+        if (rev == a) {
+            System.out.println("palindrome");
+        } else {
+            System.out.println("Not a palindrome");
+        }
+    }
+}
+
+//using recursion
+
+import java.util.*;;
+
+public class palindrome {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int a = sc.nextInt();
+        int temp = a;
+        int rev = 0;
+        int rem;
+        if (palindrome(temp, rev) == a) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not a palindrome");
+        }
+    }
+
+    static int palindrome(int num, int rev) {
+        if (num == 0)
+            return rev;
+        int rem = num % 10;
+        rev = rev * 10 + rem;
+        return palindrome(num / 10, rev);
+    }
+
+}
+
+//using String builder
+
+import java.util.*;;
+
+public class palindrome {
+
+    public static void main(String[] args) {
+        System.out.println(ispalindrome("mum".toLowerCase()));
+
+    }
+
+    static boolean ispalindrome(String string) {
+        String revstring = new StringBuilder(string).reverse().toString();
+        return string.equals(revstring);
+    }
+}
+
+//using forloop and chatAt
+import java.util.*;;
+
+public class palindrome {
+
+    public static void main(String[] args) {
+        System.out.println(ispalindrome("mum".toLowerCase()));
+
+    }
+
+    static boolean ispalindrome(String string) {
+        String rev = "";
+        int len = string.length();
+        for (int i = len - 1; i >= 0; i--) {
+            rev = rev + string.charAt(i);
+
+        }
+        return string.equals(rev);
+
+    }
+}
