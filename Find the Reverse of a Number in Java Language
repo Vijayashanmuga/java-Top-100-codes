@@ -1,0 +1,77 @@
+// reverse the number
+
+package codes;
+
+import java.util.*;
+
+public class reverse {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int a = sc.nextInt();
+        int rev = 0;
+        int rem;
+        while (a != 0) {
+            rem = a % 10;
+            rev = rev * 10 + rem;
+            a = a / 10;
+
+        }
+        System.out.println(rev);
+    }
+
+}
+
+// reverse the numberb using recursion
+
+package codes;
+
+import java.util.*;
+
+public class reverse {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int a = sc.nextInt();
+        int rev = 0;
+        System.out.println("Reverse of number" + revnum(a, rev));
+    }
+
+    static int revnum(int a, int rev) {
+        if (a == 0)
+            return rev;
+        int rem = a % 10;
+        rev = rev * 10 + rem;
+        return revnum(a / 10, rev);
+
+    }
+}
+
+// reverse the negative number using recursion
+package codes;
+
+import java.util.*;
+
+public class reverse {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int a = sc.nextInt();
+        boolean isnegative = a < 0 ? true : false;
+        if (isnegative) {
+            System.out.print("-");
+            a = a * -1;
+        }
+        getrev(a);
+    }
+
+    static void getrev(int a) {
+        int rev = 0; 
+        while (a != 0) {
+            int rem = a % 10;
+            rev = rev * 10 + rem;
+            a = a / 10;
+        }
+        System.out.println(rev); 
+    }
+}
