@@ -1,0 +1,25 @@
+class Solution {
+    int select(int arr[], int i) {
+        
+        for (int j = 0; j < arr.length; j++) {
+            System.out.print(arr[j] + " ");
+        }
+        System.out.println(); 
+        
+        selectionSort(arr, arr.length);
+        
+        return arr[i];
+    }
+
+    void selectionSort(int arr[], int n) {
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (arr[j] < arr[i]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+    }
+}
